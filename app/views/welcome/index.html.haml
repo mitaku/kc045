@@ -1,2 +1,18 @@
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html.haml
+%h1= t("application_name")
+
+%dl
+  %dt= t(".date_label")
+  %dd= l DateTime.new(2012, 4, 14, 13)
+  %dt= t(".place_label")
+  %dd= t(".place")
+  %dt= t(".theme_label")
+  %dd= t(".theme")
+  %dt= t(".tag_label")
+  %dd= t(".tag")
+  %dt= t(".hash_tag_label")
+  %dd= t(".hash_tag")
+
+#theme= render "theme"
+
+- unless signed_in?
+  #register= render "register"

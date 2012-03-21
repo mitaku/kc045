@@ -1,0 +1,21 @@
+ja:
+  application_name: "高専カンファレンス in 東京"
+  welcome:
+    index:
+      date_label: "日時"
+      place_label: "場所"
+      theme_label: "テーマ"
+      tag_label: "公式タグ"
+      hash_tag_label: "ハッシュタグ"
+      place: "株式会社オプティム"
+      theme: "『DISCOVERY』"
+      tag: "kosenconf-045tokyo"
+      hash_tag: "#kosenconf"
+    theme:
+      header: "『DISCOVERY』"
+      description: |
+        4月ということで新しい生活が始まる月です。
+        本会では『DISCOVERY(発見)』をテーマに新たな発見や、変化を話し、感じ、得て参加者みんなで楽しめたらと思います。
+        実行委員長が「いろんな人のいろんな発表が聞きたい」ということで
+        全員が「発表者」のカンファレンスを開催します。
+        みなさんの参加をお待ちしています。
