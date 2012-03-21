@@ -1,0 +1,13 @@
+%h1= t(".header")
+%table#members_table.table.table-striped
+  %thead
+    %tr
+      %th.image_col
+      %th= t(".name")
+      %th= t(".registered_at")
+  %tbody
+    - @members.each do |member|
+      %tr
+        %td.image_col= image_tag member.image
+        %td= link_to member.screen_name, "#"
+        %td= I18n.l member.created_at, :format => :short
