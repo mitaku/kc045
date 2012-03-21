@@ -31,6 +31,7 @@ gem "tabulous"
 group :development do
   gem "pry-rails"
   gem "awesome_print"
+  gem "i18n_generators"
 end
 
 # To use ActiveModel has_secure_password
