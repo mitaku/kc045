@@ -11,3 +11,26 @@
  *= require_self
  *= require_tree .
 */
+
+body {
+  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+.right-nav {
+  float: right;
+  margin-left: 10px;
+  margin-right: 0;
+}
+.secondary-nav > li.avater {
+  padding-left: 30px;
+}
+a.avater > img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 22px;
+  height: 22px;
+}
+
+ul.secondary-nav {
+  float: right;
+}

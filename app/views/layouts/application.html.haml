@@ -27,9 +27,17 @@
           %a.brand{:href => "#"}= t("application_name")
           .container-fluid.nav-collapse
             = tabs
+            %ul.nav.secondary-nav
+              - if signed_in?
+                %li.avater
+                  %a.avater
+                    = image_tag current_user.image, :title => current_user.name
+                    = current_user.screen_name
+                %li= link_to 'logout', logout_path
+              - else
+                %li= link_to 'login', '/auth/twitter'
 
     .container
-
       .content
         .row
           .span9
