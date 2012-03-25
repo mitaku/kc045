@@ -5,7 +5,7 @@
 %p>= t(".required_twitter_account")
 
 .well.register
-  - if !can_attend?
+  - if can_attend?
     = link_to(t(".register"), "/auth/twitter")
   - else
     %strong= t(".cannot_registered")
