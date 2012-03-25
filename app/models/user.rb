@@ -3,12 +3,18 @@
 class User < ActiveRecord::Base
 
   has_one :talk, :dependent => :destroy
+  has_one :profile, :dependent => :destroy
 
   after_create do
     #create_talk
-    obj = self.create_talk! do |obj|
+    self.create_talk! do |obj|
       obj.time = 5 * 60
       obj.title = self.screen_name + "さんの発表"
+    end
+    #create_profile
+    self.create_profile! do |obj|
+      obj.twitter = self.screen_name
+      obj.name = self.name
     end
   end
 
@@ -22,5 +28,4 @@ class User < ActiveRecord::Base
       user.image = auth['info']['image']
     end
   end
-
 end
