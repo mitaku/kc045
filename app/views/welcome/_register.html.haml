@@ -1,8 +1,11 @@
-%h2 参加登録
+%h2= t(".register")
 %p>
   本会に参加するには参加登録をする必要があります。
   参加される方は忘れずに登録してください。
-%p>
-  Twitterのアカウントで参加登録をすることができます。
+%p>= t(".required_twitter_account")
+
 .well.register
-  = link_to("参加登録", "/auth/twitter")
+  - if can_attend?
+    = link_to(t(".register"), "/auth/twitter")
+  - else
+    %strong= t(".cannot_registered")

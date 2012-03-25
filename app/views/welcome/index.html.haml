@@ -4,7 +4,10 @@
   %dt= t(".date_label")
   %dd= l DateTime.new(2012, 4, 14, 13)
   %dt= t(".place_label")
-  %dd= t(".place")
+  %dd>
+    = t(".place")
+    %br
+    = t(".address")
   %dt= t(".theme_label")
   %dd= t(".theme")
   %dt= t(".tag_label")

@@ -19,4 +19,12 @@ module ApplicationHelper
       nil
     end
   end
+
+  def participant
+    "#{User.count}/#{User::LIMIT}"
+  end
+
+  def can_attend?
+    !!(User.count < User::LIMIT)
+  end
 end

@@ -17,6 +17,7 @@ ja:
           attributes:
             base:
               limit_over: "参加者が上限に達しました。"
+
     attributes:
       talk:
         title: "発表タイトル"
@@ -37,9 +38,14 @@ ja:
       tag_label: "公式タグ"
       hash_tag_label: "ハッシュタグ"
       place: "株式会社オプティム"
+      address: "東京都港区港南1丁目6番34号 品川イースト"
       theme: "『DISCOVERY』"
       tag: "kosenconf-045tokyo"
       hash_tag: "#kosenconf"
+    register:
+      register: "参加登録"
+      cannot_registered: "参加者が上限に達したため、現在参加登録を行なっておりません。"
+      required_twitter_account: "参加登録にはTwitterのアカウントが必要です。"
     theme:
       header: "『DISCOVERY』"
       description: |
