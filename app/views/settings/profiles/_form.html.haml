@@ -9,6 +9,10 @@
     .controls
       = f.text_field :phonetic_name, :class => 'text_field'
   .control-group
+    = f.label :age, t(".age"), :class => 'control-label'
+    .controls
+      = f.text_field :age, :class => 'text_field'
+  .control-group
     = f.label :hometown, t(".hometown"), :class => 'control-label'
     .controls
       = f.select :hometown, Profile.hometown.options
@@ -16,6 +20,15 @@
     = f.label :blog, t(".blog"), :class => 'control-label'
     .controls
       = f.text_field :blog, :class => 'text_field'
+  .control-group
+    = f.label :attend_parties, t(".attend_parties"), :class => 'control-label'
+    .controls
+      %label.radio.inline
+        = f.radio_button :attend_parties, true
+        = t(".attend")
+      %label.radio.inline
+        = f.radio_button :attend_parties, false
+        = t(".not_to_attend")
   .control-group
     = f.label :comment, t(".comment"), :class => 'control-label'
     .controls
