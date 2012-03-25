@@ -1,5 +1,8 @@
 ja:
   application_name: "高専カンファレンス in 東京"
+  common:
+    update: "更新"
+    cancel: "キャンセル"
   welcome:
     index:
       date_label: "日時"
@@ -24,3 +27,17 @@ ja:
       header: "参加者"
       registered_at: "登録日"
       name: "名前"
+  settings:
+    profiles:
+      form:
+        name: "名前/HN"
+        phonetic_name: "よみかた"
+        blog: "ブログ"
+        hometown: "出身地"
+        comment: "一言"
+      show:
+        name: "名前/HN"
+        phonetic_name: "よみかた"
+        blog: "ブログ"
+        hometown: "出身地"
+        comment: "一言"

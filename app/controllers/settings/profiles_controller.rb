@@ -9,6 +9,11 @@ class Settings::ProfilesController < ApplicationController
   end
 
   def update
+    if @profile.update_attributes(params[:profile])
+      redirect_to(:action => :show)
+    else
+      render :action => "edit"
+    end
   end
 
 

@@ -1,19 +1,13 @@
-%label{:class => "label"}= t("activerecord.attributes.settings_profile.user_id", :default => t("activerecord.labels.user_id", :default => "User")) + ":"
-%p= @profile.user_id
-%label{:class => "label"}= t("activerecord.attributes.settings_profile.name", :default => t("activerecord.labels.name", :default => "Name")) + ":"
+%label{:class => "label"}= t(".name") + ":"
 %p= @profile.name
-%label{:class => "label"}= t("activerecord.attributes.settings_profile.phonetic_name", :default => t("activerecord.labels.phonetic_name", :default => "Phonetic name")) + ":"
+%label{:class => "label"}= t(".phonetic_name") + ":"
 %p= @profile.phonetic_name
-%label{:class => "label"}= t("activerecord.attributes.settings_profile.twitter", :default => t("activerecord.labels.twitter", :default => "Twitter")) + ":"
-%p= @profile.twitter
-%label{:class => "label"}= t("activerecord.attributes.settings_profile.blog", :default => t("activerecord.labels.blog", :default => "Blog")) + ":"
-%p= @profile.blog
-%label{:class => "label"}= t("activerecord.attributes.settings_profile.hometown", :default => t("activerecord.labels.hometown", :default => "Hometown")) + ":"
+%label{:class => "label"}= t(".hometown") + ":"
 %p= @profile.hometown
-%label{:class => "label"}= t("activerecord.attributes.settings_profile.comment", :default => t("activerecord.labels.comment", :default => "Comment")) + ":"
+%label{:class => "label"}= t(".blog") + ":"
+%p= @profile.blog
+%label{:class => "label"}= t(".comment") + ":"
 %p= @profile.comment
 
 .form-actions
-  = link_to "Back", settings_profile_path, :class => 'btn'
-  = link_to "Edit", edit_settings_profile_path(@profile), :class => 'btn'
-  = link_to "Delete", settings_profile_path(@profile), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}", :class => 'btn btn-danger'
+  = link_to "Edit", edit_settings_profile_path, :class => 'btn'
