@@ -4,10 +4,12 @@
     %tr
       %th.image_col
       %th= t(".name")
+      %th= t(".comment")
       %th= t(".registered_at")
   %tbody
     - @members.each do |member|
       %tr
         %td.image_col= image_tag member.image
         %td= link_to member.screen_name, member_path(member.id)
+        %td= member.profile.comment
         %td= I18n.l member.created_at, :format => :short
