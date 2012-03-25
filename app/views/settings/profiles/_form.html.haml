@@ -1,0 +1,35 @@
+%fieldset
+  %legend
+    = controller.action_name.capitalize
+    Profile
+  .control-group
+    = f.label :user_id, :class => 'control-label'
+    .controls
+      = f.number_field :user_id, :class => 'number_field'
+  .control-group
+    = f.label :name, :class => 'control-label'
+    .controls
+      = f.text_field :name, :class => 'text_field'
+  .control-group
+    = f.label :phonetic_name, :class => 'control-label'
+    .controls
+      = f.text_field :phonetic_name, :class => 'text_field'
+  .control-group
+    = f.label :twitter, :class => 'control-label'
+    .controls
+      = f.text_field :twitter, :class => 'text_field'
+  .control-group
+    = f.label :blog, :class => 'control-label'
+    .controls
+      = f.text_field :blog, :class => 'text_field'
+  .control-group
+    = f.label :hometown, :class => 'control-label'
+    .controls
+      = f.text_field :hometown, :class => 'text_field'
+  .control-group
+    = f.label :comment, :class => 'control-label'
+    .controls
+      = f.text_area :comment, :class => 'text_area'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to "Cancel", settings_profile_path, :class => 'btn'

@@ -1,5 +1,10 @@
 Kc045::Application.routes.draw do
 
+
+  namespace :settings do
+    resource :profile, :only => [:show, :edit, :update]
+  end
+
   root :to => "welcome#index"
 
   resources "members", :only => [:index]
