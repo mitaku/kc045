@@ -12,6 +12,7 @@ class Settings::ProfilesController < ApplicationController
     if @profile.update_attributes(params[:profile])
       redirect_to(:action => :show)
     else
+      flash.now[:errors] = @profile.errors.full_messages
       render :action => "edit"
     end
   end

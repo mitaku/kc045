@@ -1,0 +1,14 @@
+- if flash[:alert]
+  .alert.alert-error
+    %a.close{:data => {:dismiss => "alert"}} &times;
+    %strong= flash[:alert]
+- if flash[:errors]
+  .alert.alert-error
+    %a.close{:data => {:dismiss => "alert"}} &times;
+    %ul
+      - flash[:errors].each do |error|
+        %li= error
+- if flash[:notice]
+  .alert.alert-success
+    %a.close{:data => {:dismiss => "alert"}} &times;
+    %strong= flash[:notice]

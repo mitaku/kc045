@@ -12,6 +12,7 @@ class Settings::TalksController < ApplicationController
     if @talk.update_attributes(params[:talk])
       redirect_to(:action => :show)
     else
+      flash.now[:errors] = @talk.errors.full_messages
       render :action => "edit"
     end
   end
