@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+
+  rescue_from(ActiveRecord::RecordNotFound, :with => :render_404)
+  rescue_from(ActionController::UnknownAction, :with => :render_404)
+  rescue_from(ActionController::InvalidAuthenticityToken, :with => :render_422)
+
   helper_method :current_user, :signed_in?
   protected
   def login_required
@@ -20,5 +25,21 @@ class ApplicationController < ActionController::Base
 
   def signed_in?
     !!current_user
+  end
+
+  def render_404
+    render_error(404)
+  end
+
+  def render_422
+    render_error(422)
+  end
+
+  def render_500
+    render_error(500)
+  end
+
+  def render_error(status_code)
+    render :file => "#{Rails.root}/public/#{status_code}.html", :status => status_code
   end
 end
