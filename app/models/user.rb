@@ -28,4 +28,8 @@ class User < ActiveRecord::Base
       user.image = auth['info']['image']
     end
   end
+
+  def display_name
+    self.profile.try(:name) || self.name
+  end
 end

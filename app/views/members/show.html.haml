@@ -1,0 +1,22 @@
+.row
+  .span1
+    = image_tag @member.image
+  .span6
+    = @member.display_name
+  .span2
+
+.row
+  .span9
+    %label.label= t(".talk_title") + ":"
+    %p= @member.talk.title
+    %label{:class => "label"}= t(".comment") + ":"
+    = @member.profile.comment
+    %label{:class => "label"}= t(".age") + ":"
+    %p= @member.profile.age
+    %label{:class => "label"}= t(".hometown") + ":"
+    %p= @member.profile.hometown.text
+    %label{:class => "label"}= t(".attend_parties") + ":"
+    %p= @member.profile.attend_parties? ? t(".attend") : t(".not_to_attend")
+    %label{:class => "label"}= t(".blog") + ":"
+    %p= @member.profile.blog
+

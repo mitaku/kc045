@@ -33,9 +33,18 @@ ja:
       header: "参加者"
       registered_at: "登録日"
       name: "名前"
+    show:
+      name: "名前"
+      talk_title: "発表タイトル"
+      comment: "一言"
+      age: "年齢"
+      attend_parties: "懇親会"
+      attend: "参加する"
+      not_to_attend: "参加しない"
+
   settings:
     profiles:
-      form:
+      form: &profiles_form
         name: "名前/HN"
         phonetic_name: "よみかた"
         blog: "ブログ"
@@ -46,15 +55,7 @@ ja:
         attend: "参加する"
         not_to_attend: "参加しない"
       show:
-        name: "名前/HN"
-        phonetic_name: "よみかた"
-        blog: "ブログ"
-        hometown: "出身地"
-        comment: "一言"
-        age: "年齢"
-        attend_parties: "懇親会"
-        attend: "参加する"
-        not_to_attend: "参加しない"
+        <<: *profiles_form
     talks:
       form: &talks_form
         title: "タイトル"
