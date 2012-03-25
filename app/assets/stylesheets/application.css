@@ -34,3 +34,11 @@ a.avater > img {
 ul.nav.secondary-nav {
   float: right;
 }
+
+.countdown {
+  text-align: center;
+}
+.countdown > span {
+  font-size: 18px;
+  font-weight: bold;
+}

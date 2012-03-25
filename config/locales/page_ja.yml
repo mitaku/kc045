@@ -1,8 +1,13 @@
 ja:
   application_name: "高専カンファレンス in 東京"
   common:
+    edit: "編集"
     update: "更新"
     cancel: "キャンセル"
+    header:
+      login: "ログイン/参加登録"
+      logout: "ログアウト"
+      setting: "設定"
   welcome:
     index:
       date_label: "日時"

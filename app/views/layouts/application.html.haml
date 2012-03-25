@@ -2,7 +2,7 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}/
-    %title= content_for?(:title) ? yield(:title) : "kc045tokyo"
+    %title= content_for?(:title) ? yield(:title) : t("application_name")
     = csrf_meta_tags
     / Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
@@ -29,13 +29,15 @@
             = tabs
             %ul.nav.secondary-nav
               - if signed_in?
-                %li.avater
-                  %a.avater
+                %li.avater.dropdown
+                  %a.avater.dropdown-toggle{:data => {:toggle => "dropdown"}, :href => "#"}
                     = image_tag current_user.image, :title => current_user.name
                     = current_user.screen_name
-                %li= link_to 'logout', logout_path
+                  %ul.dropdown-menu
+                    %li.leaf= link_to t("common.header.setting"), settings_profile_path
+                    %li.leaf= link_to t("common.header.logout"), logout_path
               - else
-                %li= link_to 'login', '/auth/twitter'
+                %li= link_to t("common.header.login"), '/auth/twitter'
 
     .container
       .content
