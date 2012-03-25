@@ -27,6 +27,7 @@ gem "twitter-bootstrap-rails"
 gem "omniauth"
 gem "omniauth-twitter"
 gem "tabulous"
+gem "enumerize"
 
 group :development do
   gem "pry-rails"

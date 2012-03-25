@@ -11,7 +11,7 @@
   .control-group
     = f.label :hometown, t(".hometown"), :class => 'control-label'
     .controls
-      = f.text_field :hometown, :class => 'text_field'
+      = f.select :hometown, Profile.hometown.options
   .control-group
     = f.label :blog, t(".blog"), :class => 'control-label'
     .controls
