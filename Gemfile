@@ -29,10 +29,17 @@ gem "omniauth-twitter"
 gem "tabulous"
 gem "enumerize"
 
+gem "heroku", :require => false
+
 group :development do
   gem "pry-rails"
   gem "awesome_print"
   gem "i18n_generators"
+end
+
+group :production do
+  gem 'pg'
+  gem 'thin'
 end
 
 # To use ActiveModel has_secure_password
