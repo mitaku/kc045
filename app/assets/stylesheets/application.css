@@ -42,3 +42,7 @@ ul.nav.secondary-nav {
   font-size: 18px;
   font-weight: bold;
 }
+
+.field_with_errors input {
+  border-color: #B94A48;
+}
