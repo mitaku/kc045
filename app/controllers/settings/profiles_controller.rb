@@ -17,6 +17,13 @@ class Settings::ProfilesController < ApplicationController
     end
   end
 
+  def destroy
+    session[:user_id] = nil
+    current_user.destroy
+
+    redirect_to root_path, :flash => {:notice => I18n.t("settings.profiles.destroyed")}
+  end
+
 
   private
     def set_resource

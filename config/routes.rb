@@ -1,7 +1,7 @@
 Kc045::Application.routes.draw do
 
   namespace :settings do
-    resource :profile, :only => [:show, :edit, :update]
+    resource :profile, :only => [:show, :edit, :update, :destroy]
     resource :talk, :only => [:show, :edit, :update]
   end
 

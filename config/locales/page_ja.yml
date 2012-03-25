@@ -4,6 +4,7 @@ ja:
     edit: "編集"
     update: "更新"
     cancel: "キャンセル"
+    participation_cancel: "参加キャンセル"
     header:
       login: "ログイン/参加登録"
       logout: "ログアウト"
@@ -82,6 +83,8 @@ ja:
         not_to_attend: "参加しない"
       show:
         <<: *profiles_form
+        confirm: "参加をキャンセルしますか？キャンセルをすると登録情報を削除いたします。"
+      destroyed: "登録情報を削除しました。またの参加をお待ちしております。"
     talks:
       form: &talks_form
         title: "タイトル"
