@@ -27,4 +27,12 @@ module ApplicationHelper
   def can_attend?
     !!(User.count < User::LIMIT)
   end
+
+  def follow_button(_screen_name)
+    screen_name = _screen_name.html_safe
+    return <<-BUTTON
+    <a href="https://twitter.com/#{screen_name}" class="twitter-follow-button" data-show-count="false">Follow @#{screen_name}</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    BUTTON
+  end
 end
