@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120325055103) do
+ActiveRecord::Schema.define(:version => 20120325093444) do
 
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(:version => 20120325055103) do
     t.string   "blog"
     t.string   "hometown"
     t.text     "comment"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.integer  "age"
+    t.boolean  "attend_parties", :default => false
   end
 
   add_index "profiles", ["user_id"], :name => "index_profiles_on_user_id"
