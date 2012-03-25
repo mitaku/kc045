@@ -8,6 +8,7 @@ ja:
       login: "ログイン/参加登録"
       logout: "ログアウト"
       setting: "設定"
+      talk: "発表"
   welcome:
     index:
       date_label: "日時"
@@ -54,3 +55,9 @@ ja:
         attend_parties: "懇親会"
         attend: "参加する"
         not_to_attend: "参加しない"
+    talks:
+      form: &talks_form
+        title: "タイトル"
+        slide: "スライドのURL"
+      show:
+        <<: *talks_form

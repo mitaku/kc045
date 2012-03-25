@@ -1,0 +1,2 @@
+= form_for [:settings, @talk], :url => settings_talk_path, :html => { :class => "edit_talk form-horizontal", :id => "edit_talk" } do |f|
+  = render :partial => "form", :locals => {:f => f}

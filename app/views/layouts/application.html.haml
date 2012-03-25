@@ -35,6 +35,7 @@
                     = current_user.screen_name
                   %ul.dropdown-menu
                     %li.leaf= link_to t("common.header.setting"), settings_profile_path
+                    %li.leaf= link_to t("common.header.talk"), settings_talk_path
                     %li.leaf= link_to t("common.header.logout"), logout_path
               - else
                 %li= link_to t("common.header.login"), '/auth/twitter'

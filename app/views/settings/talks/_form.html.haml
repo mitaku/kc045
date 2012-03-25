@@ -1,0 +1,13 @@
+%fieldset
+  %legend
+  .control-group
+    = f.label :title, t(".title"), :class => 'control-label'
+    .controls
+      = f.text_field :title, :class => 'text_field'
+  .control-group
+    = f.label :slide, t(".slide"), :class => 'control-label'
+    .controls
+      = f.text_field :slide, :class => 'text_field'
+  .form-actions
+    = f.submit t("common.update"), :class => 'btn btn-primary'
+    = link_to t("common.cancel"), settings_talk_path, :class => 'btn'

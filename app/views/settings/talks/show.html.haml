@@ -1,0 +1,7 @@
+%label{:class => "label"}= t(".title") + ":"
+%p= @talk.title
+%label{:class => "label"}= t(".slide") + ":"
+%p= @talk.slide
+
+.form-actions
+  = link_to t("common.edit"), edit_settings_talk_path, :class => 'btn btn-primary'

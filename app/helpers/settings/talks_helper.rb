@@ -1,0 +1,2 @@
+module Settings::TalksHelper
+end
