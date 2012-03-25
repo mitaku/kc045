@@ -5,6 +5,15 @@ class User < ActiveRecord::Base
   has_one :talk, :dependent => :destroy
   has_one :profile, :dependent => :destroy
 
+  LIMIT = 30
+
+  class LimitOverException < ::StandardError; end
+
+  before_create do
+    raise LimitOverException if User.count >= LIMIT
+    true
+  end
+
   after_create do
     #create_talk
     self.create_talk! do |obj|
@@ -19,7 +28,7 @@ class User < ActiveRecord::Base
   end
 
   def self.create_with_omniauth(auth)
-    create! do |user|
+    create do |user|
       user.provider = auth['provider']
       user.uid = auth['uid']
       user.screen_name = auth['info']['nickname']

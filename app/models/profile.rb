@@ -9,7 +9,7 @@ class Profile < ActiveRecord::Base
   validates :phonetic_name, :length => {:maximum => 60}
   validates :blog, :length => {:maximum => 200}
   validates :comment, :length => {:maximum => 140}
-  validates :age, :presence => true, :numericality => {:only_integer => true}
+  validates :age, :numericality => {:only_integer => true, :allow_blank => true}
 
   enumerize :hometown, :in => [
                                :secret,

@@ -9,6 +9,26 @@ ja:
       logout: "ログアウト"
       setting: "設定"
       talk: "発表"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            base:
+              limit_over: "参加者が上限に達しました。"
+    attributes:
+      talk:
+        title: "発表タイトル"
+      profile:
+        name: "名前/HN"
+        phonetic_name: "よみかた"
+        age: "年齢"
+        comment: "一言"
+
+  sessions:
+    limit_over: "参加者上限に達したため参加登録をすることができません。今後上限が増える可能性があります。"
+    registered: "参加登録ありがとうございます。プロフィールや発表タイトルを変更してください。"
   welcome:
     index:
       date_label: "日時"
