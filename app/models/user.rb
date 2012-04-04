@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_one :talk, :dependent => :destroy
   has_one :profile, :dependent => :destroy
 
-  LIMIT = 30
+  LIMIT = 40
 
   class LimitOverException < ::StandardError; end
 
@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   after_create do
     #create_talk
     self.create_talk! do |obj|
-      obj.time = 5 * 60
+      obj.time = 0 * 60 #発表時間が増やせないので０分で登録
       obj.title = self.screen_name + "さんの発表"
     end
     #create_profile

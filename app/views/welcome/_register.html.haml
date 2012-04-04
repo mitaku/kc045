@@ -1,7 +1,13 @@
 %h2= t(".register")
+%strong 4/5: 要望が多かったため40名へ増員しました。
 %p>
   本会に参加するには参加登録をする必要があります。
   参加される方は忘れずに登録してください。
+%p>
+  %strong なお増員後の参加者に関しては時間の関係上公式な発表枠を設けておりません。
+  %br
+  懇親会で発表できる場を設けますのでよろしければそこで発表をお願いいたします。
+
 %p>= t(".required_twitter_account")
 
 .well.register
@@ -9,8 +15,3 @@
     = link_to(t(".register"), "/auth/twitter")
   - else
     %strong= t(".cannot_registered")
-    %div
-      %span= "参加したい人はこちらからつぶやいていただければ、増員を検討します。"
-      %a.twitter-share-button{:href => "https://twitter.com/share", :data => {:url => "http://kc045tokyo.heroku.com/", :text => "4/14 高専カンファレンス in 東京に参加したい!", :size => "large", :hashtags => "kosenconf"}} Tweet
-      :plain
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
