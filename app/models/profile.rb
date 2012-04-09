@@ -11,6 +11,9 @@ class Profile < ActiveRecord::Base
   validates :comment, :length => {:maximum => 140}
   validates :age, :numericality => {:only_integer => true, :allow_blank => true}
 
+  scope :is_attend_party, where(:attend_parties => true)
+
+
   enumerize :hometown, :in => [
                                :secret,
                                :hokkaido,

@@ -7,6 +7,10 @@ module ApplicationHelper
     end
   end
 
+  def participants_of_party_count
+    "#{Profile.is_attend_party.count}名"
+  end
+
   def countdown_label(date = Date.new(2012, 4, 14))
     case date <=> Date.today
     when  1 # 開催前: あとn日
