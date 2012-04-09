@@ -98,3 +98,8 @@ ja:
         slide: "スライドのURL"
       show:
         <<: *talks_form
+  timetables:
+    show:
+      header: "タイムテーブル"
+      speaker: "発表者"
+      title: "タイトル"

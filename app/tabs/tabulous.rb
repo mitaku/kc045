@@ -59,6 +59,7 @@ Tabulous.setup do |config|
       #------------------------------------------------------------------------------------------------#
       [    :welcome_tab    ,    'Welcome'       ,    root_path       ,    true        ,    true        ],
       [    :members_tab    ,    'Members'       ,    members_path    ,    true        ,    true        ],
+      [    :members_tab    ,    'Timetables'    ,    timetable_path  ,    true        ,    true        ],
       #------------------------------------------------------------------------------------------------#
       #    TAB NAME        |    DISPLAY TEXT    |    PATH            |    VISIBLE?    |    ENABLED?    #
       #------------------------------------------------------------------------------------------------#

@@ -1,0 +1,34 @@
+%h1= t(".header")
+%p 記載されている時間は開始予定時刻です。状況により前後する可能性があります。
+%table#timetable.table.table-striped
+  %thead
+    %tr
+      %th.start_at
+      %th= t(".speaker")
+      %th= t(".title")
+  %tbody
+    - opening(DateTime.new(2011, 4, 14, 13, 00)).each do |contents|
+      %tr
+        %td= I18n.l contents[:start_at], :format => :short
+        %td= contents[:speaker]
+        %td= contents[:title]
+    - talk(DateTime.new(2011, 4, 14, 14, 00)).each do |contents|
+      %tr
+        %td= I18n.l contents[:start_at], :format => :short
+        %td= contents[:speaker]
+        %td= contents[:title]
+    - talk(DateTime.new(2011, 4, 14, 15, 10), 1).each do |contents|
+      %tr
+        %td= I18n.l contents[:start_at], :format => :short
+        %td= contents[:speaker]
+        %td= contents[:title]
+    - talk(DateTime.new(2011, 4, 14, 16, 30), 2).each do |contents|
+      %tr
+        %td= I18n.l contents[:start_at], :format => :short
+        %td= contents[:speaker]
+        %td= contents[:title]
+    - closing(DateTime.new(2011, 4, 14, 17, 30)).each do |contents|
+      %tr
+        %td= I18n.l contents[:start_at], :format => :short
+        %td= contents[:speaker]
+        %td= contents[:title]

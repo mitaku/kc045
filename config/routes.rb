@@ -1,5 +1,6 @@
 Kc045::Application.routes.draw do
 
+
   namespace :settings do
     resource :profile, :only => [:show, :edit, :update, :destroy]
     resource :talk, :only => [:show, :edit, :update]
@@ -8,6 +9,7 @@ Kc045::Application.routes.draw do
   root :to => "welcome#index"
 
   resources "members", :only => [:index, :show]
+  resource :timetable, :only => :show
   match '/auth/:provider/callback', :to => "sessions#callback"
   match '/logout', :to => "sessions#destroy"
 
