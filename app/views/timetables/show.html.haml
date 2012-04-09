@@ -9,26 +9,26 @@
   %tbody
     - opening(DateTime.new(2011, 4, 14, 13, 00)).each do |contents|
       %tr
-        %td= I18n.l contents[:start_at], :format => :short
+        %td= I18n.l contents[:start_at], :format => :timetable
         %td= contents[:speaker]
         %td= contents[:title]
     - talk(DateTime.new(2011, 4, 14, 14, 00)).each do |contents|
       %tr
-        %td= I18n.l contents[:start_at], :format => :short
+        %td= I18n.l contents[:start_at], :format => :timetable
         %td= contents[:speaker]
         %td= contents[:title]
     - talk(DateTime.new(2011, 4, 14, 15, 10), 1).each do |contents|
       %tr
-        %td= I18n.l contents[:start_at], :format => :short
+        %td= I18n.l contents[:start_at], :format => :timetable
         %td= contents[:speaker]
         %td= contents[:title]
     - talk(DateTime.new(2011, 4, 14, 16, 30), 2).each do |contents|
       %tr
-        %td= I18n.l contents[:start_at], :format => :short
+        %td= I18n.l contents[:start_at], :format => :timetable
         %td= contents[:speaker]
         %td= contents[:title]
     - closing(DateTime.new(2011, 4, 14, 17, 30)).each do |contents|
       %tr
-        %td= I18n.l contents[:start_at], :format => :short
+        %td= I18n.l contents[:start_at], :format => :timetable
         %td= contents[:speaker]
         %td= contents[:title]
