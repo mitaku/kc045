@@ -25,7 +25,7 @@ module TimetablesHelper
   def closing(start_at)
     [].tap do |list|
       list << {:id => nil, :title => "告知タイム", :speaker => "", :start_at => start_at}
-      list << {:id => nil, :title => "クロージング", :speaker => "", :start_at => start_at += 10.minutes}
+      list << {:id => nil, :title => "クロージング", :speaker => "", :start_at => start_at += 15.minutes}
       list << {:id => nil, :title => "記念撮影", :speaker => "運営", :start_at => start_at += 5.minutes}
       list << {:id => nil, :title => "懇親会 - 野良LTも受け付けます!", :speaker => "", :start_at => DateTime.new(2011, 4, 14, 18, 00)}
       list << {:id => nil, :title => "撤収 - 気をつけてお帰り下さい。", :speaker => "", :start_at => DateTime.new(2011, 4, 14, 19, 30)}
@@ -44,10 +44,11 @@ module TimetablesHelper
           start_at += 360.seconds
         end
       end
+      talks << {:id => nil, :title => "--- 休憩 ---", :speaker => "", :start_at => start_at}
     end
   end
 
   def speakers
-    [[12, 20, 2, 10, 31, 7, 19, 23, 8, 5], [17, 28, 22, 11, 16, 1, 4, 9, 15, 26], [25, 33, 24, 21, 29, 18, 32, 14, nil, nil]]
+    [[12, 20, 2, 10, 31, 7, 19, 23, 8, 5], [17, 28, 22, 11, 16, 1, 4, 9], [15, 26, 25, 33, 24, 21, 29, 47, 32, 14]]
   end
 end
